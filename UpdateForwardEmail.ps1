@@ -1,0 +1,1 @@
+﻿Set-Mailbox -Identity dguerrav@zegelipae.edu.pe -ForwardingSmtpAddress dguerrav@inlearning.pe -force

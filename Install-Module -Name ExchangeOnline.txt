@@ -1,0 +1,12 @@
+##Install-Module Microsoft.Graph -Force
+##Connect-MgGraph
+#estos dos de arriba solo se usa cuando el powershell será usado recien
+
+Install-Module -Name ExchangeOnlineManagement
+​Import-Module ExchangeOnlineManagement
+​Connect-ExchangeOnline
+
+
+Set-MailboxFolderPermission -Identity in_piso12_sala_B@inlearning.pe:\calendar -User Default -AccessRights LimitedDetails
+
+Set-ExecutionPolicy RemoteSigned -Force

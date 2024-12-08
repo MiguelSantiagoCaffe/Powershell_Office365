@@ -1,0 +1,1 @@
+﻿Get-Msoluser -All -Returndeletedusers | Restore-Msoluser

@@ -1,0 +1,18 @@
+#crea
+New-DistributionGroup -Name "Salas de Casona" -RoomList -Members $Members
+
+#elimina
+Remove-DistributionGroup -Identity "Salas de Natalio" 
+
+#agrega miembros
+Add-DistributionGroupMember -Identity "Salas de Casona" -Member in_piso2_sala_1@inlearning.pe
+
+#actualiza name de grupo salas
+Set-DistributionGroup -Identity "Listas de Salas" -DisplayName "Salas de Natalio" -Name "Salas de Natalio"
+
+#valida si existe grupo de salas
+Get-DistributionGroup -Identity "salas de casona"
+Get-DistributionGroup -Identity "salas de natalio"
+
+#ver miembros de lista
+Get-DistributionGroupMember -Identity "Salas de Casona" | Select-Object PrimarySmtpAddres

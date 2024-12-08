@@ -1,0 +1,1 @@
+﻿Set-MsolUserPrincipalName -UserPrincipalName mejoracontinuaidat_@inlearning.edu.pe -NewUserPrincipalName prueba100@inlearning.edu.pe

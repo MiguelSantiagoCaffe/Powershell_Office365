@@ -1,0 +1,5 @@
+# Obtener los buzones de correo y exportar los alias a un archivo CSV
+Get-Mailbox -ResultSize Unlimited | 
+    Select-Object DisplayName, UserPrincipalName, 
+        @{Name="Alias";Expression={$_.EmailAddresses | Where-Object {$_ -like "smtp:*"} | ForEach-Object {$_ -replace "smtp:"}} } | 
+    Export-Csv -Path "C:\Users\TICZEGEL\Desktop\alias.csv" -NoTypeInformation
